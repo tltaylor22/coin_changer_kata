@@ -45,5 +45,12 @@ class TestCoinChanger < Minitest::Test
 	def test_1_dime_for_1_dime
 		amount = 10
 		assert_equal([10], change(amount))
-	end			
+	end	
+
+	def	test_2_dimes_for_20
+		amount = 20
+		assert_equal([10, 10], change(amount))
+	end
+
+
 end
