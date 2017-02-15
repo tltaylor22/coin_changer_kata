@@ -52,5 +52,19 @@ class TestCoinChanger < Minitest::Test
 		assert_equal([10, 10], change(amount))
 	end
 
+	def test_1_quarter_for_1_quarter
+		amount = 25
+		assert_equal([25], change(amount))
+	end
+
+	def test_2_quarters_for_50
+		amount = 50
+		assert_equal([25, 25], change(amount))
+	end
+
+	def test_3_quarters_for_75
+		amount = 75
+		assert_equal([25, 25, 25], change(amount))
+	end
 
 end
