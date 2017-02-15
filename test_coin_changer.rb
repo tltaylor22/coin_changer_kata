@@ -32,13 +32,18 @@ class TestCoinChanger < Minitest::Test
 		assert_equal([5], change(amount))
 	end
 
-	def test_2_nickeles_for_10
-		amount = 10
-		assert_equal([5, 5], change(amount))
-	end	
+	# def test_2_nickeles_for_10
+	# 	amount = 10
+	# 	assert_equal([5, 5], change(amount))
+	# end	
 
-	def test_3_nickeles_for_15
-		amount = 15
-		assert_equal([5, 5, 5], change(amount))
-	end		
+	# def test_3_nickeles_for_15
+	# 	amount = 15
+	# 	assert_equal([5, 5, 5], change(amount))
+	# end		
+
+	def test_1_dime_for_1_dime
+		amount = 10
+		assert_equal([10], change(amount))
+	end			
 end
