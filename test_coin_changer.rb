@@ -31,4 +31,9 @@ class TestCoinChanger < Minitest::Test
 		amount = 5
 		assert_equal([5], change(amount))
 	end
+
+	def test_2_nickeles_for_10
+		amount = 10
+		assert_equal([5, 5], change(amount))
+	end	
 end
